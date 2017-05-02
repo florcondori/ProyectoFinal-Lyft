@@ -51,6 +51,26 @@ window.addEventListener("load", function(){
 
 });
 
+var lastScroll = 0;
+window.addEventListener('scroll', function(){
+	var scrollNumber = window.pageYOffset || document.body.scrollTop;
+	console.log(scrollNumber);
+		if(scrollNumber>lastScroll){
+			document.getElementById("nav-header").style.background = "white";
+			document.getElementById("nav-header").style.color ="black";
+			document.getElementById("sign-up").style.visibility = "visible";
+			document.getElementById("logo-mostrar").style.display = "none";
+			console.log("arriba");
+		}else{
+			console.log("abajo");
+			if(scrollNumber<=3){
+				document.getElementById("nav-header").removeAttribute("style");
+				document.getElementById("sign-up").removeAttribute("style");
+				document.getElementById("login-in").removeAttribute("style");
+			}
+		}
+});
+
 function validarInputVacio(){
 	if( this.value.trim().length !==0){
 		return true;

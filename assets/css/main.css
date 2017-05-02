@@ -12,6 +12,8 @@ nav{
 	box-sizing: border-box;
 	color: white;
 	overflow: auto;
+	padding-top: 20px;
+	padding-left: 20px;
 }
 button{
 	border-radius: 7px;
@@ -44,10 +46,12 @@ nav a{
 	display: none;
 }
 #log-in{
+	visibility: visible;
 	border-color: white;
 	color: white;
 }
 #sign-up{
+	visibility: hidden;
 	border-color: #FF00BF;
 	color: #FF00BF;
 }
