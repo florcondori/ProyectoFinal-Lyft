@@ -104,8 +104,14 @@ img[alt="phone"]{
 	margin-top: 3rem;
 }
 /*seccion videos*/
+iframe{
+	width: 100%;
+	height: 500px;
+}
 .contenido-video{
-	overflow: auto;
+	overflow: hidden;
+	height: 500px;
+	width: 100%;
 }
 .video-descripcion{
 	box-sizing: border-box;
