@@ -56,17 +56,16 @@ window.addEventListener('scroll', function(){
 	var scrollNumber = window.pageYOffset || document.body.scrollTop;
 	console.log(scrollNumber);
 		if(scrollNumber>lastScroll){
-			document.getElementById("nav-header").style.background = "white";
-			document.getElementById("nav-header").style.color ="black";
+			document.getElementById("nav-header").classList.add("header-in");
 			document.getElementById("sign-up").style.visibility = "visible";
 			document.getElementById("logo-mostrar").style.display = "none";
-			console.log("arriba");
+			document.getElementById("logo-oculto").classList.remove("oculto");
 		}else{
-			console.log("abajo");
 			if(scrollNumber<=3){
-				document.getElementById("nav-header").removeAttribute("style");
+				document.getElementById("nav-header").classList.remove("header-in");
 				document.getElementById("sign-up").removeAttribute("style");
-				document.getElementById("login-in").removeAttribute("style");
+				document.getElementById("logo-mostrar").removeAttribute("style");
+				document.getElementById("logo-oculto").classList.add("oculto");
 			}
 		}
 });
