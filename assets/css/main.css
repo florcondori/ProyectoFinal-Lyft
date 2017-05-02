@@ -1,3 +1,53 @@
 body{
 	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+header{
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+}
+video{
+	width: 100%;
+	height: 100%;
+}
+input{
+	border: none;
+	border-bottom: 2px solid #C7C2DD;
+	margin: 10px 0;
+	width: 100%;
+}
+h1{
+	font-size: 37px;
+}
+a{
+	color: grey;
+}
+:focus{
+	outline: none;
+}
+.text-small{
+	font-size: 10px;
+}
+.div-input-oculto{
+	margin-bottom: 10px;
+}
+#div-formulario{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	background: white;
+	padding: 50px 70px 20px 70px;
+	box-sizing: border-box;
+	width: 40%;
+}
+#btn-become{
+	background: rgb(235, 0, 183);
+	border: none;
+	border-radius: 7px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
 }
