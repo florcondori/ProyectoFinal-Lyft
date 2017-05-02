@@ -71,7 +71,7 @@ section{
 	box-sizing: border-box;
 	width: 100%;
 }
-img[alt="phone"]{
+img{
 	height: 100%;
 	width: 100%;
 }
@@ -123,4 +123,47 @@ iframe{
 	box-sizing: border-box;
 	float: left;
 	width: 65%;
+}
+/*Estilos del footer*/
+footer{
+	width: 100%;
+	box-sizing: border-box;
+	background: #333447;
+	color: white;
+	padding: 3rem 4rem;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	width: 100%;
+	font-size: 10px;
+}
+footer a:hover{
+	color: #FF00BF;
+}
+.div-footer{
+	overflow: auto;
+}
+.div-recursos{
+	display: inline-block;
+	float: left;
+	width: 60%;
+}
+.seccion-recursos{
+	display: inline-block;
+	width: 30%;
+}
+.div-descargas{
+	display: inline-block;
+	float: left;
+	width: 40%;
+}
+.contenido-descarga{
+	width: 150px;
+	height: 40px;
+	margin: 20px 0;
+}
+.div-icons{
+	border-bottom: 1px solid white;
 }
