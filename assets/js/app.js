@@ -15,32 +15,15 @@ window.addEventListener("load", function(){
 				mostrarError(telefono);
 			}
 		}
-/*		if( this.value.trim().length !==0){
-			if(/^[0-9]{9}$/.test(this.value)){
-				this.nextElementSibling.removeAttribute("style");
-				this.removeAttribute("style");
-			}else{
-				this.nextElementSibling.style.visibility = "visible";
-				this.style.borderColor = "red";
-			}
-		}else{
-			this.nextElementSibling.style.visibility = "visible";
-			this.style.borderColor = "red";
-		}*/
 	});
 
 	email.addEventListener("blur", function(){
-		if( this.value.trim().length !==0){
+		if( validarInputVacio){
 			if(/([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/gi.test(this.value)){
-				this.nextElementSibling.removeAttribute("style");
-				this.removeAttribute("style");
+				quitarError(email);
 			}else{
-				this.nextElementSibling.style.visibility = "visible";
-				this.style.borderColor = "red";
+				mostrarError(email);
 			}
-		}else{
-			this.nextElementSibling.style.visibility = "visible";
-			this.style.borderColor = "red";
 		}
 	});
 
