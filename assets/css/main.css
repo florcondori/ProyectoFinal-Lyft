@@ -103,3 +103,18 @@ img[alt="phone"]{
 .mt3{
 	margin-top: 3rem;
 }
+/*seccion videos*/
+.contenido-video{
+	overflow: auto;
+}
+.video-descripcion{
+	box-sizing: border-box;
+	float: left;
+	width: 35%;
+	padding: 2rem 3rem;
+}
+.div-video{
+	box-sizing: border-box;
+	float: left;
+	width: 65%;
+}
