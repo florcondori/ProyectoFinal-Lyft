@@ -3,6 +3,50 @@ body{
 	margin: 0;
 	padding: 0;
 }
+/*esstilos del Nav*/
+nav{
+	width: 100%;
+	box-sizing: border-box;
+	color: white;
+	overflow: auto;
+}
+button{
+	border-radius: 7px;
+	background: none;
+	padding: 7px;
+	margin-right: 10px;
+}
+nav a{
+	text-decoration: none;
+
+	display: inline-block;
+	width: 100px;
+}
+.contenedor-logos{
+	width: 60%;
+	float: left;
+}
+.contenedor-anclas{
+	width: 40%;
+	float: left;
+	margin-top: 20px;
+}
+.div-logo{
+	display: inline-block;
+	width: 100px;
+	height: 70px;
+}
+.oculto{
+
+}
+#log-in{
+	border-color: white;
+}
+#sign-up{
+	border-color: #FF00BF;
+	color: #FF00BF;
+}
+/*estilos del header*/
 header{
 	position: relative;
 	box-sizing: border-box;
