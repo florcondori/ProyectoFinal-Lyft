@@ -5,6 +5,9 @@ body{
 }
 /*esstilos del Nav*/
 nav{
+	position: fixed;
+	top: 0;
+	z-index: 300;
 	width: 100%;
 	box-sizing: border-box;
 	color: white;
@@ -13,12 +16,12 @@ nav{
 button{
 	border-radius: 7px;
 	background: none;
-	padding: 7px;
+	padding: 7px 14px;
 	margin-right: 10px;
 }
 nav a{
 	text-decoration: none;
-
+	color: white;
 	display: inline-block;
 	width: 100px;
 }
@@ -33,14 +36,16 @@ nav a{
 }
 .div-logo{
 	display: inline-block;
-	width: 100px;
-	height: 70px;
+	width: 80px;
+	height: 60px;
+	padding: 10px;
 }
 .oculto{
-
+	display: none;
 }
 #log-in{
 	border-color: white;
+	color: white;
 }
 #sign-up{
 	border-color: #FF00BF;
