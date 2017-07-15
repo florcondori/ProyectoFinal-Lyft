@@ -114,7 +114,7 @@ img[alt="error"]{
 }
 #div-formulario{
 	position: absolute;
-	top: 200px;
+	top: 215px;
 	right: 0;
 	display: inline-block;
 	background: white;
@@ -132,6 +132,14 @@ img[alt="error"]{
 	margin-top: 7px;
 	margin-right: 7px;
 }
+header>div:nth-child(3){
+	z-index: 4;
+	width: 100%;
+	position: absolute;
+	bottom: -131px;
+	height: 7rem;
+	background: linear-gradient(transparent, #76278f)
+}
 /*Estilos de section Informacion*/
 section{
 	box-sizing: border-box;
@@ -146,7 +154,7 @@ img{
 	color: white;
 	height: auto;
 	overflow: auto;
-	padding: 5% 10% 20px 10%;
+	padding: 7% 10%;
 }
 .text-grande{
 	font-size: 2em;
@@ -204,6 +212,7 @@ footer a{
 	display: inline-block;
 	width: 100%;
 	font-size: 10px;
+	margin: 5px 0;
 }
 footer a:hover{
 	color: #FF00BF;
