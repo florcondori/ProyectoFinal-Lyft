@@ -73,10 +73,10 @@ header{
 	box-sizing: border-box;
 	width: 100%;
 	height: 759px;
+	top: -98px;
 }
 video{
 	width: 100%;
-	height: 100%;
 }
 input{
 	border: none;
@@ -114,7 +114,7 @@ img[alt="error"]{
 }
 #div-formulario{
 	position: absolute;
-	bottom: 0;
+	top: 200px;
 	right: 0;
 	display: inline-block;
 	background: white;

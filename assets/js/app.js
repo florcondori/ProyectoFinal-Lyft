@@ -2,23 +2,26 @@ window.addEventListener("load", function(){
 	var telefono = document.getElementById("telefono");
 	var email = document.getElementById("email");
 	var inputText = document.getElementsByClassName("js-input-text");
+	var btn = document.getElementById("btn-become")
 
-	telefono.addEventListener("click", function(){
+	telefono.addEventListener("focus", function(){
 		this.parentNode.nextElementSibling.style.display = "block";
 	});
 
-	telefono.addEventListener("blur", function(){
-		if(validarInputVacio){
-			if(/^[0-9]{9}$/.test(this.value)){
-				quitarError(telefono);
-			}else{
-				mostrarError(telefono);
-			}
+	telefono.addEventListener("blur", validarInputVacio);
+	telefono.addEventListener("keyup", function(){
+
+		if(/^[0-9]{9}$/.test(this.value) && this.value.length==9){
+			quitarError(telefono);
+		}else{
+			mostrarError(telefono);
 		}
+	
 	});
 
 	email.addEventListener("blur", function(){
 		if( validarInputVacio){
+
 			if(/([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/gi.test(this.value)){
 				quitarError(email);
 			}else{
@@ -28,33 +31,43 @@ window.addEventListener("load", function(){
 	});
 
 	for(var i=0; i<inputText.length;i++){
-		inputText[i].addEventListener("blur", function(){
-			if( this.value.trim().length !==0){
-				var araryText = this.value.split(" ");
-				araryText.forEach(function(elem, i){
-					araryText[i] = elem.charAt(0).toUpperCase()+elem.slice(1).toLowerCase(); 
-				});
-				if(this.value === araryText.join(" ")){
-					this.nextElementSibling.removeAttribute("style");
-					this.removeAttribute("style");
-				}
-				else{
-					this.nextElementSibling.style.visibility = "visible";
-					this.style.borderColor = "red";					
-				}
+
+		inputText[i].addEventListener("keyup", function(){
+
+			if(/^[a-zA-Z]*$/.test(this.value)){
+				quitarError(this);
 			}else{
-				this.nextElementSibling.style.visibility = "visible";
-				this.style.borderColor = "red";
+				mostrarError(this);
 			}
 		});
+
+		inputText[i].addEventListener("blur", function(){
+
+			var araryText = this.value.split(" ");
+			araryText.forEach(function(elem, i){
+				araryText[i] = elem.charAt(0).toUpperCase()+elem.slice(1).toLowerCase(); 
+			});
+			
+			if(this.value.toLowerCase() === araryText.join(" ").toLowerCase()){
+				this.value = araryText.join(" ");
+			}								
+		});
+
+		inputText[i].addEventListener("blur", validarInputVacio);
 	}
+
+	btn.addEventListener("click", function(e){
+		e.preventDefault();
+		document.getElementById("formulario-sign-up").reset();
+		document.getElementsByClassName("div-input-oculto")[0].removeAttribute("style");
+	});
 
 });
 
 var lastScroll = 0;
 window.addEventListener('scroll', function(){
 	var scrollNumber = window.pageYOffset || document.body.scrollTop;
-	console.log(scrollNumber);
+
 		if(scrollNumber>lastScroll){
 			document.getElementById("nav-header").classList.add("header-in");
 			document.getElementById("sign-up").style.visibility = "visible";
@@ -74,7 +87,7 @@ function validarInputVacio(){
 	if( this.value.trim().length !==0){
 		return true;
 	}else{
-		console.log(this.nextElementSibling);
+
 		this.nextElementSibling.style.visibility = "visible";
 		this.style.borderColor = "red";
 		return false;
