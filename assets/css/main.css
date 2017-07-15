@@ -237,12 +237,16 @@ footer a:hover{
 .contenido-descarga{
 	width: 150px;
 	height: 40px;
-	margin: 20px 0;
+	margin: 20px auto;
+}
+.contenido-descarga img{
+	height: auto;
 }
 .div-icons{
 	border-bottom: 1px solid white;
 	margin: 20px 20% 0 20%;
 	text-align: center;
+	padding-bottom: 7px;
 }
 .div-icons span{
 	display: inline-block;
